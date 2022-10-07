@@ -14,11 +14,11 @@ public class Ej01MetodoXMLActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ej01_metodo_xmlactivity);
     }
 
+
     /**
      * Método asociado al TextView a través del atributo android:onClick en res/layout/activity_metodo_xml.xml
      * DEPRECATED (Obsoleto): https://developer.android.com/reference/android/R.attr#onClick
-     * <p>
-     * El método recibe como parámetro la vista (view) sobre la que se hizo el click (el botón). (1)
+     * El método recibe como parámetro la View (1) sobre la que se hizo el click (el botón).
      */
     public void miMetodoOnClick(View view) {
 
@@ -26,11 +26,22 @@ public class Ej01MetodoXMLActivity extends AppCompatActivity {
         TextView tv = findViewById(R.id.textView);
 
         // Cambiando el texto del TextView con el contenido del EditText
-        tv.setText("¡Hola mundo!");
+        tv.setText("¡Hola mundo!"); // mejor usar la siguiente línea:
+        // tv.setText(R.string.hola_mundo);  // (2)
 
     }
 
 }
 
-/* (1) Todos los objetos "visuales" (Layouts, TextViews, botones...) se llaman vistas y heredan
- * de la clase View. */
+/*
+ * (1) Todos los objetos "visuales" (Layouts, TextViews, botones...) se llaman views (vistas) y heredan
+ * de la clase View.
+ *
+ * (2) No deben hardcodearse strings literales, sino recuperarse del fichero de recursos
+ * res/values/strings.xml
+ * R es la clase autogenerada en compilación donde se recopilan los recursos definidos en xml.
+ * El método setText está sobrecargado y acepta Strings o ints, pero cuando acepta ints es para
+ * pasarle referencias a recursos: R.string.hola_mundo es una variable de tipo int que contiene el
+ * identificador de un recurso de tipo String, que está en strings.xml y al que accederá.
+ *
+ * */

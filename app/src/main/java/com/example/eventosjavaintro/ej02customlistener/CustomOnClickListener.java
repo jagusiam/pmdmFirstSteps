@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.example.eventosjavaintro.R;
 
+/* Clase que implemente la interfaz OnClickListener, que obliga a sobreescribir el método onClick */
 public class CustomOnClickListener implements View.OnClickListener {
     TextView tv;
 
