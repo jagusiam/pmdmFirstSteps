@@ -3,11 +3,9 @@ package com.example.eventosjavaintro.ej02customlistener;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.eventosjavaintro.R;
-
 /* Clase que implemente la interfaz OnClickListener, que obliga a sobreescribir el método onClick */
-public class CustomOnClickListener implements View.OnClickListener {
-    TextView tv;
+class CustomOnClickListener implements View.OnClickListener {
+    private TextView tv;
 
     /**
      * El constructor tiene que recibir la referencia al TextView ya que pertenece a la
