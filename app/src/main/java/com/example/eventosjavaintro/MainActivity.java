@@ -3,7 +3,7 @@ package com.example.eventosjavaintro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.os.Bundle; //AGA: Consult Anroid Developers Oficial Docs
 import android.widget.Button;
 
 import com.example.eventosjavaintro.ej02customlistener.Ej02WithCustomListenerActivity;
@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Setea la vista a partir del fichero activity_main.xml
+        // AGA: Consult Anroid Developers Oficial Docs: Bundle, onCreate, savedInstanceState
 
         // Busca objeto con id "btn_to_metodo_xml" en clase R (autogenerada a partir de los xml)
         Button b1 = findViewById(R.id.btn_to_metodo_xml);
@@ -30,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
          - La clase de la Activity que ha de ser creada. Como esta activity todavía no se puede
          instaciar, se usa la sintaxis .class (reflection).
          */
+        //AGA: INTENTS + .class (reflection) - Consult Anroid Developers Oficial Docs
         Intent intent = new Intent(this, Ej01MetodoXMLActivity.class);
-
+    
 
         /** Asigno al botón la función de callback (la acción a realizar cuando se pulsa).
          En este caso llamo al método startActivity que recibe como argumento el intent que le indica
@@ -47,15 +49,21 @@ public class MainActivity extends AppCompatActivity {
         Button b4 = findViewById(R.id.btn_to_clase_anonima);
         Button b5 = findViewById(R.id.btn_to_lambda);
         Button b6 = findViewById(R.id.btn_to_activity_listener);
-
-
-        b2.setOnClickListener(v -> startActivity(new Intent(this, Ej02WithCustomListenerActivity.class)));
+       
+        b2.setOnClickListener(v -> startActivity(new Intent(this, Ej02WithCustomListenerActivity.class))); 
         b3.setOnClickListener(v -> startActivity(new Intent(this, Ej03WithInnerCustomListenerActivity.class)));
         b4.setOnClickListener(v -> startActivity(new Intent(this, Ej04ClaseAnonimaActivity.class)));
         b5.setOnClickListener(v -> startActivity(new Intent(this, Ej05LambdaActivity.class)));
         b6.setOnClickListener(v -> startActivity(new Intent(this, Ej06ListenerIsActivity.class)));
-
-
+        
+        /*AGA: Which method better/more effective:
+        1. 
+        Button b1 = findViewById(R.id.btn_to_metodo_xml);
+        Intent intent = new Intent(this, Ej01MetodoXMLActivity.class);
+        
+        2. 
+        b2.setOnClickListener(v -> startActivity(new Intent(this, Ej02WithCustomListenerActivity.class))); 
+        */
     }
 }
 
