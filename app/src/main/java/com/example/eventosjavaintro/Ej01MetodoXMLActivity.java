@@ -20,15 +20,21 @@ public class Ej01MetodoXMLActivity extends AppCompatActivity {
      * DEPRECATED (Obsoleto): https://developer.android.com/reference/android/R.attr#onClick
      * El método recibe como parámetro la View (1) sobre la que se hizo el click (el botón).
      */
+    //AGA: android:onClick deprecated? - Consult official docu
+    
     public void miMetodoOnClick(View view) {
 
         // buscamos el objeto con id "textView" autogenerado desde el layout
         TextView tv = findViewById(R.id.textView);
 
         // Cambiando el texto del TextView con el contenido del EditText
+ //AGA: EditText - referencia a EditText? y que linea de código evoca el cambio de texto en el EditText?    
+        
         tv.setText("¡Hola mundo!"); // mejor usar la siguiente línea:
         // tv.setText(R.string.hola_mundo);  // (2)
-
+       
+//AGA: res/values/strings.xml - se autogeneran por el entorno? en que momento? - consultar lo de (2)
+        
     }
 
 }
