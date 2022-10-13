@@ -5,10 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ej01MetodoXMLActivity">
+    tools:context=".Ej01MetodoXMLActivity"> 
+    <!-- AGA: tools context : READ OFICIAL DOCU -->
 
     <!-- Button con el método que manejará el evento onClick declarado con atributo android:onClick
-    Obsoleto: https://developer.android.com/reference/android/R.attr#onClick -->
+    Obsoleto: https://developer.android.com/reference/android/R.attr#onClick --> 
+    <!-- AGA: android:onClick - read oficial docu -->
+    
 
     <Button
         android:id="@+id/button"
