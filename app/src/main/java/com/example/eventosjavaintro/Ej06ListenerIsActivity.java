@@ -13,7 +13,7 @@ public class Ej06ListenerIsActivity extends AppCompatActivity implements View.On
     (https://es.wikipedia.org/wiki/Principio_de_responsabilidad_%C3%BAnica).
     Normalmente no es la mejor solución. Sin embargo, fue una práctica habitual en algún tiempo y
     aún pueden encontrarse códigos que lo utilizan. */
-
+//AGA: esta opción desaconsejable?
     TextView tv;
 
     @Override
